@@ -1,14 +1,15 @@
-# scbuilder -- Docker image for building a statically linked ShellCheck
+# scbuilder
 
-This docker image is responsible for building ShellCheck statically.
+Docker image for building a statically linked [ShellCheck](https://github.com/koalaman/shellcheck) binary.
 
-## To run:
+## Usage
 
-    docker pull koalaman/scbuilder &&
-    git clone https://github.com/koalaman/shellcheck &&
-    cd shellcheck &&
-    docker run -v "$PWD:/mnt" koalaman/scbuilder
+```bash
+docker pull koalaman/scbuilder &&
+git clone https://github.com/koalaman/shellcheck &&
+cd shellcheck/ &&
+docker run --volume "${PWD}:/mnt" koalaman/scbuilder
+```
 
 This should result in a statically linked `shellcheck` in the current
 directory.
-
