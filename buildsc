@@ -3,5 +3,5 @@
 cabal update &&
 cabal install --dependencies-only &&
 cabal build Paths_ShellCheck &&
-ghc -optl-static -optl-pthread -idist/build/autogen --make shellcheck
-
+ghc -optl-static -optl-pthread -idist/build/autogen --make shellcheck &&
+strip --strip-all shellcheck
